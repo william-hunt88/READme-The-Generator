@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs")
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const promptUser = () => {
@@ -74,12 +75,23 @@ init();
 
 promptUser()
   .then(promptInfo => {
-    let fileName = promptInfo.title + " - README.md"
-    const pageTxt = writeToFile(fileName, promptInfo)
-    fs.writeFile("./" + fileName, pageTxt, err => {
-      if (err) throw new Error(err);
+      console.log(promptInfo);
+      return generateMarkdown(promptInfo);
+  })
+  .then(pageTxt => {
+      fs.writeFile("READme.md", pageTxt, err => {
+          if (err) throw new Error(err);
+      })
+      console.log("hooray")
+  }); 
 
-      console.log("gooray!")
-    })
-  });
 
+
+
+    // let fileName = promptInfo.title + " - README.md"
+    // const pageTxt = writeToFile(fileName, promptInfo)
+    // fs.writeFile("./" + fileName, pageTxt, err => {
+    //   if (err) throw new Error(err);
+
+    //   console.log("gooray!")
+    // })
