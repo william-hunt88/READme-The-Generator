@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 const fs = require("fs")
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
+// TODO: Create an array of questions for user input     /// ask user what license they wish to add
 const promptUser = () => {
   return inquirer.prompt([
     {
@@ -61,29 +61,20 @@ const promptUser = () => {
 
 // TODO: Create a function to write README file
 const writeToFile = (fileName, data) => {
-  return `
-  #${data.title}
-  *${data.description}*
-  `
+  //join current working directory with whatever fileName is passed thru
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data)
 }
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
 
 promptUser()
   .then(promptInfo => {
-      console.log(promptInfo);
-      return generateMarkdown(promptInfo);
-  })
-  .then(pageTxt => {
-      fs.writeFile("READme.md", pageTxt, err => {
-          if (err) throw new Error(err);
+      return writeToFile("READme.md", generateMarkdown(promptInfo))
+      .then(() => {
+        console.log("succesfully printed READme.md")
+      }).catch(err => {
+        if (err) throw new Error(err);
       })
-      console.log("hooray")
-  }); 
+  })
+
 
 
 
