@@ -18,31 +18,6 @@ function renderLicenseSection(license) {
 const generateMarkdown = (data) => {
   return ` # ${data.title}
 
-  ## ${data-subtitle}
-  
-  ### Table of Contents
-  * [Description](#project-description) 
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Credits](#credits)
-  * [License](#license)
-  
-  ### Project Description
-  ${data.description}
-  
-  ### Installation
-  ${data.installation}
-  
-  ### Usage
-  ${data.usage}
-  
-  ### Credits
-  ${data.credits}
-  
-  ### License
-  * ${renderLicenseSection}
-  * ${renderLicenseLink()}
-  * ${renderLicenseBadge (data.license)}
 `
 }
 
