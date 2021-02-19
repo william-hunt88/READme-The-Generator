@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/william-hunt88/READme-The-Generator#readme",
   "dependencies": {
-    "inquirer": "^7.3.3"
+    "inquirer": "^7.3.3",
+    "moment": "^2.29.1"
   }
 }
