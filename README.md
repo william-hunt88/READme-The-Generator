@@ -1,4 +1,5 @@
- # Tester
+ # s
+  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
   
   ### Table of Contents
   * [Description](#project-description) 
@@ -7,15 +8,15 @@
   * [License](#license)
   
   ### Project Description
-  lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum
+  sdf
 
   
   ### Usage
-  <img src = "./assets/images/test.png" >
+  <img src = "sf" >
   
 
   
   ### Credits
 
   
-  Licensed under the MIT license
+  Licensed under the GPLv3 license

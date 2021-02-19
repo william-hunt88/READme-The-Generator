@@ -10,6 +10,11 @@ const promptUser = () => {
   return inquirer.prompt([
     {
       type: "input",
+      name: "name",
+      message: "Please enter your full name"
+    },
+    {
+      type: "input",
       name: "title",
       message: "What is the title of your project? (Required)",
       validate: (titleInput) => {
@@ -57,7 +62,7 @@ const promptUser = () => {
       type: "checkbox",
       name: "license",
       message: "Please pick a license, if any",
-      choices: ["MIT", "Apache License 2.0", "GPLv2", "GPLv3", "BSD", "None"]
+      choices: ["MIT", "Apache License 2.0", "GPLv3", "BSD 2-Clause", "None"]
     }
     // Installation instructions?
     // instructions and examples for use
