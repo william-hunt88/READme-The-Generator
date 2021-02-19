@@ -1,23 +1,21 @@
- # sd
-  
+ # Tester
   
   ### Table of Contents
   * [Description](#project-description) 
-  * [Installation](#installation)
   * [Usage](#usage)
   * [Credits](#credits)
   * [License](#license)
   
   ### Project Description
-
-  
-  ### Installation
+  lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum lorem lipsum
 
   
   ### Usage
+  <img src = "./assets/images/test.png" >
+  
 
   
   ### Credits
 
   
-  ### License
+  Licensed under the MIT license

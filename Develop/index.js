@@ -37,12 +37,6 @@ const promptUser = () => {
     },
     {
       type: "input",
-      name: "motivation",
-      message:
-        "What was your motivation to build this app? WHat needs does it address?",
-    },
-    {
-      type: "input",
       name: "Link",
       message: "Please provide a link to your deployed project. (Required)",
       validate: (linkInput) => {
@@ -54,6 +48,17 @@ const promptUser = () => {
         }
       },
     },
+    {
+      type: "input",
+      name: "usage",
+      message: "If you would like to add an image, please provide a link using the relative filepath (relative to READme Gen)"
+    },
+    {
+      type: "checkbox",
+      name: "license",
+      message: "Please pick a license, if any",
+      choices: ["MIT", "Apache License 2.0", "GPLv2", "GPLv3", "BSD", "None"]
+    }
     // Installation instructions?
     // instructions and examples for use
     // image - "![alt text](assets/images/screenshot.png"
@@ -71,7 +76,7 @@ promptUser()
   .then(promptInfo => {
       return writeToFile("READme.md", generateMarkdown(promptInfo))
   }).then(() => {
-    console.log("boobs")
+    console.log("hooray!")
   })
 
 
