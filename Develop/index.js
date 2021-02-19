@@ -2,6 +2,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs")
 const generateMarkdown = require('./utils/generateMarkdown.js');
+var path = require('path');
+const { SlowBuffer } = require("buffer");
 
 // TODO: Create an array of questions for user input     /// ask user what license they wish to add
 const promptUser = () => {
@@ -68,11 +70,8 @@ const writeToFile = (fileName, data) => {
 promptUser()
   .then(promptInfo => {
       return writeToFile("READme.md", generateMarkdown(promptInfo))
-      .then(() => {
-        console.log("succesfully printed READme.md")
-      }).catch(err => {
-        if (err) throw new Error(err);
-      })
+  }).then(() => {
+    console.log("boobs")
   })
 
 
