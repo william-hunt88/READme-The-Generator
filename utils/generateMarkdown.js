@@ -27,14 +27,15 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
+function renderLicenseLink(license, link) {
+  return `[${license[0]}](${link} + /blob/main/LICENSE.txt)`
+
 }
+
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license, name) {
-
-
+function renderLicenseSection(license, name, link) {
   if(license != "None") {
     console.log(license)
     if(license[0] === 'MIT') {
@@ -53,7 +54,7 @@ function renderLicenseSection(license, name) {
   } else {
     return
   }
-}
+};
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = (data) => {
@@ -74,11 +75,7 @@ const generateMarkdown = (data) => {
   <img src = "${data.usage}" >
   
 
-  
-  ### Credits
-
-  
-  ${renderLicenseSection(data.license, data.name)}
+  ${renderLicenseSection(data.license, data.name, data.link)}
 `
 }
 

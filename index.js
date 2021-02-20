@@ -42,7 +42,7 @@ const promptUser = () => {
     },
     {
       type: "input",
-      name: "Link",
+      name: "link",
       message: "Please provide a link to your deployed project. (Required)",
       validate: (linkInput) => {
         if (linkInput) {

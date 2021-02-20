@@ -1,9 +1,12 @@
-const moment = require('moment');
+const moment = require("moment");
 
-function sendLicenseTxt (license, name) {
-    const MIT = `MIT License
+// This module is meant only to store and send the license text for the resulting LICENSE.txt
 
-    Copyright (c) ${moment().format('Y')}  ${name}
+function sendLicenseTxt(license, name) {
+  // declare License text with template literal insertions for current year and developers name
+  const MIT = `MIT License
+
+    Copyright (c) ${moment().format("Y")}  ${name}
     
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -21,9 +24,9 @@ function sendLicenseTxt (license, name) {
     AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.`
-  
-    const apache = `                             Apache License
+    SOFTWARE.`;
+
+  const apache = `                             Apache License
     Version 2.0, January 2004
   http://www.apache.org/licenses/
   
@@ -211,7 +214,7 @@ function sendLicenseTxt (license, name) {
   same "printed page" as the copyright notice for easier
   identification within third-party archives.
   
-  Copyright ${moment().format('Y')} ${name}
+  Copyright ${moment().format("Y")} ${name}
   
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -223,14 +226,29 @@ function sendLicenseTxt (license, name) {
   distributed under the License is distributed on an "AS IS" BASIS,
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
-  limitations under the License.`
-  
+  limitations under the License.`;
+
   const gplv3 = `GNU GENERAL PUBLIC LICENSE
   Version 3, 29 June 2007
   
   Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
   Everyone is permitted to copy and distribute verbatim copies
   of this license document, but changing it is not allowed.
+
+  Copyright (C) ${moment().format("Y")}  ${name}
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses/>.
   
        Preamble
   
@@ -898,9 +916,9 @@ function sendLicenseTxt (license, name) {
   may consider it more useful to permit linking proprietary applications with
   the library.  If this is what you want to do, use the GNU Lesser General
   Public License instead of this License.  But first, please read
-  <https://www.gnu.org/licenses/why-not-lgpl.html>.`
-  
-  const bsd2 = `Copyright ${moment().format('Y')} ${name}
+  <https://www.gnu.org/licenses/why-not-lgpl.html>.`;
+
+  const bsd2 = `Copyright ${moment().format("Y")} ${name}
   
   Redistribution and use in source and binary forms, with or without modification, 
   are permitted provided that the following conditions are met:
@@ -920,21 +938,22 @@ function sendLicenseTxt (license, name) {
   OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) 
   HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
   TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
-  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.`
+  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.`;
 
-    if(license != "None") {
-        if(license[0] === 'MIT') {
-            return `${MIT}`
-        } else if (license[0] === 'Apache License 2.0') {
-          return `${apache}`
-        } else if (license[0] === 'GPLv3') {
-          return `${gplv3}`
-        } else if (license[0] === 'BSD 2-Clause') {
-          return `${bsd2}`
-        }  
-      } else {
-        return
-      }
-}
+  // If license does not equal none, send the corresponding license text
+  if (license != "None") {
+    if (license[0] === "MIT") {
+      return `${MIT}`;
+    } else if (license[0] === "Apache License 2.0") {
+      return `${apache}`;
+    } else if (license[0] === "GPLv3") {
+      return `${gplv3}`;
+    } else if (license[0] === "BSD 2-Clause") {
+      return `${bsd2}`;
+    }
+  } else {
+    return;
+  }
+};
 
-module.exports = sendLicenseTxt
+module.exports = sendLicenseTxt;
