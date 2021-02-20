@@ -28,7 +28,8 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license, link) {
-  return `[${license[0]}](${link} + /blob/main/LICENSE.txt)`
+  let tag = "/blob/main/LICENSE.txt"
+  return `[${license[0]}](${link + tag})`
 
 }
 
@@ -40,16 +41,16 @@ function renderLicenseSection(license, name, link) {
     console.log(license)
     if(license[0] === 'MIT') {
       fs.writeFileSync(path.join(process.cwd(), "LICENSE.txt"), sendLicenseTxt(license, name))
-      return `Licensed under the MIT license`
+      return `Licensed under the ${renderLicenseLink(license, link)} license`
     } else if (license[0] === 'Apache License 2.0') {
       fs.writeFileSync(path.join(process.cwd(), "LICENSE.txt"), sendLicenseTxt(license, name))
-      return `Licensed under the Apache 2.0 license`
+      return `Licensed under the ${renderLicenseLink(license, link)} license`
     } else if (license[0] === 'GPLv3') {
       fs.writeFileSync(path.join(process.cwd(), "LICENSE.txt"), sendLicenseTxt(license, name))
-      return `Licensed under the GPLv3 license`
+      return `Licensed under the ${renderLicenseLink(license, link)} license`
     } else if (license[0] === 'BSD 2-Clause') {
       fs.writeFileSync(path.join(process.cwd(), "LICENSE.txt"), sendLicenseTxt(license, name))
-      return `Licensed under the BSD 2 -Clause license`
+      return `Licensed under the ${renderLicenseLink(license, link)} license`
     }  
   } else {
     return

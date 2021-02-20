@@ -1,5 +1,5 @@
- # READme - the Generator
-  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+ # sf
+  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
   
   ### Table of Contents
   * [Description](#project-description) 
@@ -8,15 +8,11 @@
   * [License](#license)
   
   ### Project Description
-  I pulled together this simple, for now, READme
+  sfd
 
   
   ### Usage
-  <img src = "rovide a little feedback here and we'll take care of it!" >
+  <img src = "afsdf" >
   
 
-  
-  ### Credits
-
-  
-  Licensed under the GPLv3 license
+  Licensed under the [Apache License 2.0](https://github.com/william-hunt88/READme-The-Generator/blob/main/LICENSE.txt) license
