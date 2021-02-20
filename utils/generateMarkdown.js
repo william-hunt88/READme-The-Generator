@@ -23,8 +23,7 @@ function renderLicenseBadge(license) {
   }
 };
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+
 function renderLicenseLink(license, link) {
   // back tag for URL of input repo main branch where LICENSE.txt will be pushed
   let tag = "/blob/main/LICENSE.txt";
@@ -32,8 +31,7 @@ function renderLicenseLink(license, link) {
   return `[${license[0]}](${link + tag})`;
 };
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+
 function renderLicenseSection(license, name, link) {
   if (license != "None") {
     console.log(license);
