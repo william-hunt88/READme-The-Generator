@@ -55,8 +55,38 @@ const promptUser = () => {
     },
     {
       type: "input",
+      name: "installation",
+      message: "Please enter instructions for installation"
+    },
+    {
+      type: "input",
       name: "usage",
-      message: "If you would like to add an image, please provide a link using the relative filepath (relative to READme Gen)"
+      message: "Provide examples, text, video link, or images of the app in use"
+    },
+    {
+      type: "input",
+      name: "contributions",
+      message: "Please enter rules, expectations or any details regarding outside contributions to this code."
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "Please provide your email address."
+    },
+    {
+      type: "input",
+      name: "github",
+      message: "What is your github username?"
+    },
+    {
+      type: "input",
+      name: "tests",
+      message: "Detail any tests that may exist for this app."
+    },
+    {
+      type: "input",
+      name: "image",
+      message: "If you would like to add an image, please provide a link using the relative filepath"
     },
     {
       type: "checkbox",

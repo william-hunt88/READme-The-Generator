@@ -69,19 +69,38 @@ function renderLicenseSection(license, name, link) {
 const generateMarkdown = (data) => {
   return ` # ${data.title}
   ${renderLicenseBadge(data.license)}
+
+  <img src = "${data.usage}" >
   
   ### Table of Contents
-  * [Description](#project-description) 
+  * [Description](#project-description)
+  * [Installation](#installation)
   * [Usage](#usage)
-  * [Credits](#credits)
+  * [Contribution](#contributions)
+  * [Tests](#tests)
+  * [Questions](#questions)
   * [License](#license)
   
   ### Project Description
   ${data.description}
 
-  
+  ### Installation
+  ${data.installations}
+
   ### Usage
-  <img src = "${data.usage}" >
+  ${data.usage}
+
+  ### Contributions
+  ${data.contributions}
+
+  ### Tests
+  ${data.tests}
+
+  ## Questions
+  ${data.github}
+  https://github.com/${data.github}
+
+  ${data.email}
   
 
   ${renderLicenseSection(data.license, data.name, data.link)}
