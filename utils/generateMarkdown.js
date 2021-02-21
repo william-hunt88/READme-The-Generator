@@ -96,13 +96,13 @@ const generateMarkdown = (data) => {
   ### Tests
   ${data.tests}
 
-  ## Questions
+  ### Questions
   ${data.github}
   https://github.com/${data.github}
 
   ${data.email}
   
-
+  #### License
   ${renderLicenseSection(data.license, data.name, data.link)}
 `
 };
