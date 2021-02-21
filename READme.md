@@ -1,7 +1,7 @@
- # READme Gen
-  [![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
+ # READme the Generator
+  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-  <img src = "youtewb.com" >
+  <img src = "k" >
   
   ### Table of Contents
   * [Description](#project-description)
@@ -13,25 +13,25 @@
   * [License](#license)
   
   ### Project Description
-  Tester
+  lorem ipsum
 
   ### Installation
-  undefined
+  k
 
   ### Usage
-  youtewb.com
+  k
 
   ### Contributions
-  This code can be shared
+  k
 
   ### Tests
-  none
+  k
 
-  ## Questions
-  william.hunt88
-  https://github.com/william.hunt88
+  ### Questions
+  k
+  https://github.com/k
 
-  wfh2d88@gmail.com
+  k
   
-
-  Licensed under the [BSD 2-Clause](https://github.com/william-hunt88/READme-The-Generator/blob/main/LICENSE.txt) license
+  #### License
+  Licensed under the [GPLv3](k/blob/main/LICENSE.txt) license

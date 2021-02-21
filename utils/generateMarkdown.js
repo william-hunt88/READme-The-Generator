@@ -6,7 +6,7 @@ const sendLicenseTxt = require("./storeLicenseTxt.js");
 function renderLicenseBadge(license) {
   // if license does not equal "none" - as stated in choices array - return template literal with appropriate badge link
   if (license != "None") {
-    console.log(license);
+    // If license does not equal none, add the appropriate badge
     if (license[0] === "MIT") {
       return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
     } else if (license[0] === "Apache License 2.0") {
@@ -21,20 +21,18 @@ function renderLicenseBadge(license) {
   } else {
     return "";
   }
-};
-
+}
 
 function renderLicenseLink(license, link) {
   // back tag for URL of input repo main branch where LICENSE.txt will be pushed
   let tag = "/blob/main/LICENSE.txt";
   // template literals used in markdown language style to create link
   return `[${license[0]}](${link + tag})`;
-};
-
+}
 
 function renderLicenseSection(license, name, link) {
   if (license != "None") {
-    console.log(license);
+    // if license does not equal none, write the appropriate LICENSE.txt file
     if (license[0] === "MIT") {
       fs.writeFileSync(
         path.join(process.cwd(), "LICENSE.txt"),
@@ -63,10 +61,10 @@ function renderLicenseSection(license, name, link) {
   } else {
     return "";
   }
-};
+}
 
-// TODO: Create a function to generate markdown for README
 const generateMarkdown = (data) => {
+  // Template literal data that makes up the resulting READme
   return ` # ${data.title}
   ${renderLicenseBadge(data.license)}
 
@@ -85,7 +83,7 @@ const generateMarkdown = (data) => {
   ${data.description}
 
   ### Installation
-  ${data.installations}
+  ${data.installation}
 
   ### Usage
   ${data.usage}
@@ -102,9 +100,9 @@ const generateMarkdown = (data) => {
 
   ${data.email}
   
-  #### License
+  
   ${renderLicenseSection(data.license, data.name, data.link)}
-`
+`;
 };
 
 module.exports = generateMarkdown;
