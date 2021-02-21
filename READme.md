@@ -1,7 +1,7 @@
  # READme the Generator
-  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+  [![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 
-  <img src = "k" >
+  <img src = "none" >
   
   ### Table of Contents
   * [Description](#project-description)
@@ -13,25 +13,25 @@
   * [License](#license)
   
   ### Project Description
-  lorem ipsum
+  Handy dandy READme generator
 
   ### Installation
-  k
+  Clone the repo and have at it!
 
   ### Usage
-  k
+  none
 
   ### Contributions
-  k
+  none
 
   ### Tests
-  k
+  none
 
   ### Questions
-  k
-  https://github.com/k
+  william-hunt88
+  https://github.com/william-hunt88
 
-  k
+  wfh2d88@gmail.com
   
-  #### License
-  Licensed under the [GPLv3](k/blob/main/LICENSE.txt) license
+  
+  Licensed under the [BSD 2-Clause](https://github.com/william-hunt88/READme-The-Generator/blob/main/LICENSE.txt) license

@@ -169,13 +169,14 @@ const promptUser = () => {
   ]);
 };
 
-// TODO: Create a function to write README file
+
 const writeToFile = (fileName, data) => {
   //join current working directory with whatever fileName is passed thru
   return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 };
 
 promptUser()
+// data from prompts passed to be processed and printed
   .then((promptInfo) => {
     return writeToFile("READme.md", generateMarkdown(promptInfo));
   })
