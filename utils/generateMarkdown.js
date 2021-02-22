@@ -66,8 +66,7 @@ function renderLicenseSection(license, name, link) {
 const generateMarkdown = (data) => {
   // Template literal data that makes up the resulting READme
   return ` # ${data.title}
-  ${renderLicenseBadge(data.license)} <br>
-  ${data.link}
+  ${renderLicenseBadge(data.license)} 
 
   <img src = "${data.image}" >
   
@@ -96,10 +95,11 @@ const generateMarkdown = (data) => {
   ${data.tests}
 
   ### Questions
-  ${data.github}
+  ${data.email} <br> 
+
   https://github.com/${data.github}
 
-  ${data.email}
+  ${data.link}
   
   
   ${renderLicenseSection(data.license, data.name, data.link)}
