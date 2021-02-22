@@ -1,8 +1,8 @@
  # READme the Generator
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) <br>
   https://github.com/william-hunt88/READme-The-Generator
 
-  <img src = "see the provided youtube video for reference of the app in use. Some notes, the end target of the LICENSE.txt that is generated should be the main brnach of your repo on Github. This will eneable the READme link to navugate to your license in the most streamlined fashion." >
+  <img src = "./assets/images/screenshot.png" >
   
   ### Table of Contents
   * [Description](#project-description)
@@ -20,19 +20,19 @@
   Simply clone the code from the provided repo link, navigate to the folder in your command line and run the app using the command “node index.” 
 
   ### Usage
-  see the provided youtube video for reference of the app in use. Some notes, the end target of the LICENSE.txt that is generated should be the main brnach of your repo on Github. This will eneable the READme link to navugate to your license in the most streamlined fashion.
+   Please see the provided youtube video for reference of the app in use. Some notes, the end target of the LICENSE.txt that is generated should be the main branch of your repo on Github. This will enable the READme link to navigate to your license in the most streamlined fashion.
 
   ### Contributions
   Pull requests are welcome!
 
   ### Tests
-  No apps present yet but some are in the works.
+  None yet
 
   ### Questions
-  william.hunt88
-  https://github.com/william.hunt88
+  william-hunt88
+  https://github.com/william-hunt88
 
-  wfh2d882gmail.com
+  wfh2d88@gmail.com
   
   
   Licensed under the [MIT](https://github.com/william-hunt88/READme-The-Generator/blob/main/LICENSE.txt) license
