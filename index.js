@@ -105,7 +105,7 @@ const promptUser = () => {
       type: "input",
       name: "usage",
       message:
-        "Provide text describing the use of this app, or video link demonstrating.",
+        "Provide a youtube link, or plain text demonstrating the app in use",
       validate: (usageInput) => {
         if (usageInput) {
           return true;
