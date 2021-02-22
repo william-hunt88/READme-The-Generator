@@ -67,6 +67,7 @@ const generateMarkdown = (data) => {
   // Template literal data that makes up the resulting READme
   return ` # ${data.title}
   ${renderLicenseBadge(data.license)}
+  ${data.link}
 
   <img src = "${data.usage}" >
   
