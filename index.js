@@ -5,7 +5,7 @@ const generateMarkdown = require("./utils/generateMarkdown.js");
 var path = require("path");
 const { SlowBuffer } = require("buffer");
 
-// TODO: Create an array of questions for user input     /// ask user what license they wish to add
+// prompts with the various questions to ask the user
 const promptUser = () => {
   return inquirer.prompt([
     {
@@ -17,6 +17,32 @@ const promptUser = () => {
           return true;
         } else {
           console.log("Please enter your full name!");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "Please provide your email address.",
+      validate: (emailInput) => {
+        if (emailInput) {
+          return true;
+        } else {
+          console.log("Please provide an email address!");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
+      name: "github",
+      message: "What is your github username?",
+      validate: (githubInput) => {
+        if (githubInput) {
+          return true;
+        } else {
+          console.log("Please provide a github username!");
           return false;
         }
       },
@@ -52,7 +78,7 @@ const promptUser = () => {
       type: "input",
       name: "link",
       message:
-        "Please provide a link to your github repo in the follwing format. (https://github.com/'your username'/'repo name') (Required)",
+        "Please provide a link to this projects github repo in the follwing format. (https://github.com/'your username'/'repo name') (Required)",
       validate: (linkInput) => {
         if (linkInput) {
           return true;
@@ -107,32 +133,6 @@ const promptUser = () => {
     },
     {
       type: "input",
-      name: "email",
-      message: "Please provide your email address.",
-      validate: (emailInput) => {
-        if (emailInput) {
-          return true;
-        } else {
-          console.log("Please provide an email address!");
-          return false;
-        }
-      },
-    },
-    {
-      type: "input",
-      name: "github",
-      message: "What is your github username?",
-      validate: (githubInput) => {
-        if (githubInput) {
-          return true;
-        } else {
-          console.log("Please provide a github username!");
-          return false;
-        }
-      },
-    },
-    {
-      type: "input",
       name: "tests",
       message: "Detail any tests that may exist for this app.",
       validate: (testsInput) => {
@@ -140,7 +140,7 @@ const promptUser = () => {
           return true;
         } else {
           console.log(
-            "Please provide detials about any tests that are provided for this app"
+            "Please provide details about any tests that are provided for this app"
           );
           return false;
         }
