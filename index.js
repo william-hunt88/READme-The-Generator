@@ -178,7 +178,7 @@ const writeToFile = (fileName, data) => {
 promptUser()
 // data from prompts passed to be processed and printed
   .then((promptInfo) => {
-    return writeToFile("READmeSample.md", generateMarkdown(promptInfo));
+    return writeToFile("READme.md", generateMarkdown(promptInfo));
   })
   .then(() => {
     console.log("READme.md and LICENSE.txt succesfully printed");
