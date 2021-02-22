@@ -19,13 +19,13 @@
   Simply clone the code from the provided repo link, navigate to the folder in your command line and run the app using the command “node index.” 
 
   ### Usage
-  https://www.youtube.com/watch?v=G_CidBi8S9o
+  [![demo video](http://img.youtube.com/vi/hNjr51zpBlo/0.jpg)](http://www.youtube.com/watch?v=hNjr51zpBlo "demo video")
 
   ### Contributions
   Pull requests are welcome!
 
   ### Tests
-  No tests exist yet
+  No tests yet but thats next!
 
   ### Questions
   wfh2d88@gmail.com <br> 
